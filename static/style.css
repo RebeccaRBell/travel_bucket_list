@@ -1,0 +1,101 @@
+
+
+:root{
+        --color-1: #146c78;
+        --color-2: #0e91a1;
+        --color-3: #7dce94;
+        --color-4: #efede7;
+        --color-5: #ec8939;
+        --logo-font: 'Calistoga', cursive;
+}
+
+body {
+        background-color: var(--color-4)
+}
+main{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+}
+.plane-icon{
+        width: 100%;
+        height: 100px;
+        margin: -20%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        animation-name: plane;
+        animation-duration: 5s;
+        animation-fill-mode:forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        color: transparent;
+        transform: rotate(-35deg);
+}
+.plane-icon i{
+        font-size: 300px;
+}
+@keyframes plane{
+        0%{
+                top: 100%;
+                left: 0%;
+        }
+        25%{
+                top: 75%;
+                left: 25%;
+                color: var(--color-2);
+        }
+        50%{
+                top: 50%;
+                left: 50%;
+        }
+        75%{
+                top: 25%;
+                left: 75%;
+                color: var(--color-3);
+        }
+        100%{
+                top: 0%;
+                left: 100%;
+        }
+}
+.site-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        animation-name: logo;
+        animation-delay: 4s;
+        animation-duration: 500s;
+        animation-fill-mode: backwards;
+        animation-direction: normal;
+        animation-timing-function:ease-in;
+
+}
+.site-logo p {
+        font-size: 55px;
+        color: var(--color-4);
+        font-family: var(--logo-font);
+}
+.site-logo a {
+        text-decoration: none;
+}
+@keyframes logo {
+        0%{
+                opacity: 0%;
+                background-color: var(--color-5);
+        }
+        0.5%{
+                opacity: 100%;
+                background-color: var(--color-5);
+        }
+        100%{
+                opacity: 100%;
+                background-color: var(--color-5);
+        }
+}
