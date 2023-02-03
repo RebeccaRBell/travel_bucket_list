@@ -3,14 +3,32 @@
 	{% for trips in trips %}
 	<div class="trip-card">
 		{% for cities in cities %} {% if trips.city_id == cities.id %}
-		<h1 class="city">{{ cities.name }}</h1>
+		<p class="city">{{ cities.name }}</p>
 		{% endif %} {% endfor %} {% for countries in countries %} {% if
 		trips.country_id == countries.id %}
 		<p class="country">{{countries.name}}</p>
 		{% endif %} {% endfor %}
-		<p class="reason">{{trips.reason}}</p>
-		<p class="season">{{trips.season}}</p>
-		<p class="timeframe">{{trips.timeframe}}</p>
+			<div class="row-2-part-1">
+				<p class="question-heading">Reasons To Go:</p>
+				<p class="reason">{{trips.reason}}</p>
+			</div>
+                        <div class="row-3-card">
+                                <div class="row-3-part-2">
+				<p class="question-heading">When:</p>
+				<p class="timeframe">{{trips.timeframe}}</p>
+			</div>
+                        <div class="row-3-part-1">
+				<p class="question-heading">Season:</p>
+				<p class="season">{{trips.season}}</p>
+			</div>
+		</div>
+		<hr />
+		<div class="trip-buttons">
+			<button class="edit-button"><a href="/trip/id/edit">Edit Trip</a></button>
+			<button class="delete-button">
+				<a href="/trip/id/delete"><i class="fa-regular fa-circle-xmark"></i></a></i>
+			</button>
+		</div>
 	</div>
 	{% endfor %}
 </div>
