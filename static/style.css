@@ -1,11 +1,25 @@
-
+/* font-family: 'Calistoga',
+cursive;
+font-family: 'Libre Baskerville',
+serif;
+font-family: 'M PLUS 1p',
+sans-serif;
+font-family: 'Roboto Serif',
+serif;
+*/
 :root{
-        --color-1: #146c78;
-        --color-2: #0e91a1;
-        --color-3: #7dce94;
-        --color-4: rgb(245, 245, 244);
-        --color-5: #ff9946;
+        --color-1: #16697A;
+        --color-2: #489FB5;
+        --color-3: #82C0CC;
+        --color-4: #EDE7E3;
+        --color-5: #f0991e;
         --logo-font: 'Calistoga', cursive;
+        --font-1: 'Libre Baskerville',
+                serif;
+        --font-2: 'Roboto Serif',
+                        serif;
+        --font-3: 'M PLUS 1p',
+                sans-serif;
 }
 /* OPENING */
 body {
@@ -196,50 +210,90 @@ main{
 /* HOME PAGE */
 .home-body{
         width: 100vw;
+        height: 80vh;
         margin: 0 auto;
-        
+        background-color: ghostwhite;
 }
 .nav-bar{
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        background-color: var(--color-1);
+        background-color: var(--color-4);
         margin: 0 auto;
-        padding: 10px
+        height: 100px;
+        letter-spacing: 1px;
 }
 .nav-bar a {
         text-decoration: none;
-        color: white;
+        color:var(--color-1);
         list-style-type: none;
 }
 .nav-bar li {
         list-style-type: none;
         font-size: 20px;
-        font-family: var(--logo-font);
-        padding-right: 40px;
+        font-family: var(--font-3);
+        font-weight: 400;
+        padding-right: 50px;
 }
 .nav-logo i{
         font-size: 50px;
+        margin: auto;
+        padding: 0px;
+        margin-left: -10px;
+        color: var(--color-5)
 }
 .nav-bar li:hover {
         font-weight: bolder;
 }
 .home-page-buttons{
         width: 100vw;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-}
 
-.add-trip-button {
-        width: 30%;
-        height: 15%;
-        margin: 70px 0px 40px 0px;
-        font-size: 30px;
 }
-.my-trips-button{
+.my-trips-button {
         width: 30%;
-        height: 15%;
-        font-size: 30px;
+        height: 20%;
+        margin: 150px 0px 60px 0px;
+        font-size: 40px;
+        border-radius: 50px;
+        border: none;
+        background-color:var(--color-1);
+        box-shadow: 1px 5px 2px 1px var(--color-5);
+        font-family: var(--font-3);
+        font-weight: 300;
+}
+.my-trips-button a {
+        text-decoration: none;
+        color: var(--color-4);
+}
+.my-trips-button:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 0px var(--color-5);
+        margin: 155px 0px 55px 0px;
+
+
+}
+.add-trip-button{
+        width: 30%;
+        height: 20%;
+        font-size: 40px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 1px 5px 2px 1px var(--color-5);
+        background-color: var(--color-1);
+        font-family: var(--font-3);
+        font-weight: 300;
+}
+.add-trip-button a {
+        text-decoration: none;
+        color: var(--color-4);
+}
+.add-trip-button:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 0px var(--color-2);
+        margin-top: 5px;
 }
