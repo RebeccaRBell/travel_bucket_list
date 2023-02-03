@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from controllers.country_controller import countries_blueprint
 from controllers.city_controller import cities_blueprint
-from controllers.user_controller import users_blueprint
+from controllers.trip_controller import users_blueprint
 
 app = Flask(__name__)
 

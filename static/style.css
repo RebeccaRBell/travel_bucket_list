@@ -242,8 +242,9 @@ main{
         margin-left: -10px;
         color: var(--color-5)
 }
-.nav-bar li:hover {
-        font-weight: bolder;
+.nav-bar li:hover, .nav-bar a:hover {
+        color: var(--color-5);
+        text-decoration: underline dotted;
 }
 .home-page-buttons{
         width: 100vw;
