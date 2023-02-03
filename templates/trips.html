@@ -1,1 +1,17 @@
-{% extends "base.html" %} {% block content %} {% endblock %}
+{% extends "base.html" %} {% block content %}
+<div class="container">
+	{% for trips in trips %}
+	<div class="trip-card">
+		{% for cities in cities %} {% if trips.city_id == cities.id %}
+		<h1 class="city">{{ cities.name }}</h1>
+		{% endif %} {% endfor %} {% for countries in countries %} {% if
+		trips.country_id == countries.id %}
+		<p class="country">{{countries.name}}</p>
+		{% endif %} {% endfor %}
+		<p class="reason">{{trips.reason}}</p>
+		<p class="season">{{trips.season}}</p>
+		<p class="timeframe">{{trips.timeframe}}</p>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

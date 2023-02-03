@@ -19,4 +19,8 @@ city_repository.save(city2)
 
 trip1 = Trip(city1.id, city1.country_id, "Food, Culture", "Spring", "In the next year")
 trip_repository.save(trip1)
-  
+
+trip2 = Trip(city2.id, city2.country_id, "Architecture, History", "Autumn", "In the next 2 years"
+)
+trip_repository.save(trip2)
+pdb.set_trace()

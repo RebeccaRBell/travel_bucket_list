@@ -2,6 +2,9 @@ from db.run_sql import run_sql
 from models.country import Country
 from models.city import City
 from models.trip import Trip
+from repositories import trip_repository
+from repositories import city_repository
+from repositories import country_repository
 
 
 def save(trip):
