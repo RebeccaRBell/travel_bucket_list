@@ -19,3 +19,4 @@ city_repository.save(city2)
 
 trip1 = Trip(city1.id, city1.country_id, "Food, Culture", "Spring", "In the next year")
 trip_repository.save(trip1)
+  

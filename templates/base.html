@@ -32,6 +32,8 @@
 				</ul>
 			</div>
 		</header>
+		{% block content %}
+
 		<main class="home-page-buttons">
 			<button type="button" class="my-trips-button">
 				<a href="/trips">My Trips</a>
@@ -40,5 +42,7 @@
 				<a href="/add_trip">Add New Trip</a>
 			</button>
 		</main>
+
+		{% endblock%}
 	</body>
 </html>
