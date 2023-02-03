@@ -14,17 +14,27 @@
 			href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="/static/style.css" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='style.css') }}"
+		/>
 		<title>Travel Bucket List</title>
 	</head>
-	<body>
-		<main>
-			<div class="plane-icon"><i class="fa-solid fa-plane"></i></div>
-			<div class="site-logo">
-				<a href="/">
-					<p>Your Travel<br />Bucket List</p></a
-				>
+	<body class="home-body">
+		<header>
+			<div>
+				<ul class="nav-bar">
+					<li class="nav-logo"><i class="fa-solid fa-earth-asia"></i></li>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/trips">Trips</a></li>
+					<li><a href="/trips/add_trip">Add Trip</a></li>
+					<li><a href="/">Opening Page</a></li>
+				</ul>
 			</div>
+		</header>
+		<main class="home-page-buttons">
+			<button class="add-trip-button">Add New Trip</button>
+			<button class="my-trips-button">My Trips</button>
 		</main>
 	</body>
 </html>

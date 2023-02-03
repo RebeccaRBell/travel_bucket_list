@@ -1,14 +1,13 @@
 
-
 :root{
         --color-1: #146c78;
         --color-2: #0e91a1;
         --color-3: #7dce94;
-        --color-4: #efede7;
-        --color-5: #ec8939;
+        --color-4: rgb(245, 245, 244);
+        --color-5: #ff9946;
         --logo-font: 'Calistoga', cursive;
 }
-
+/* OPENING */
 body {
         background-color: var(--color-4)
 }
@@ -17,6 +16,100 @@ main{
         height: 90vh;
         display: flex;
         justify-content: center;
+}
+.cloud1-icon{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        animation-name: cloud1;
+        animation-duration: 4.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        color: transparent;
+}
+.cloud1-icon i {
+        font-size: 400px;
+}
+@keyframes cloud1{
+        0%{
+                opacity: 0%;
+                color: white;
+                left: -10%;
+                top: 22%;
+        }
+        5%{
+                opacity: 80%;
+                color: white;
+                left: -10%;
+                top: 22%;
+        }
+        90%{
+                opacity: 80%;
+                color: white;
+                left: -10%;
+                top: 22%;
+        }
+        100%{
+                opacity: 0%;
+                color: white;
+                left: -10%;
+                top: 22%;
+        }
+}
+.cloud2-icon {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        z-index: 1;
+        animation-name: cloud2;
+        animation-duration: 4.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        color: transparent;
+}
+
+.cloud2-icon i {
+        font-size: 550px;
+}
+
+@keyframes cloud2 {
+        0% {
+                opacity: 0%;
+                color: white;
+                left: 62%;
+                top: 70%;
+        }
+
+        5% {
+                opacity: 80%;
+                color: white;
+                left: 62%;
+                top: 70%;
+        }
+
+        90% {
+                opacity: 90%;
+                color: white;
+                left: 62%;
+                top: 70%;
+        }
+
+        100% {
+                opacity: 0%;
+                color: white;
+                left: 62%;
+                top: 70%;
+        }
 }
 .plane-icon{
         width: 100%;
@@ -27,7 +120,8 @@ main{
         text-align: center;
         position: fixed;
         animation-name: plane;
-        animation-duration: 5s;
+        animation-duration: 4.5s;
+        animation-delay: 1s;
         animation-fill-mode:forwards;
         animation-direction: normal;
         animation-timing-function: linear;
@@ -79,7 +173,7 @@ main{
 }
 .site-logo p {
         font-size: 55px;
-        color: var(--color-4);
+        color: whitesmoke;
         font-family: var(--logo-font);
 }
 .site-logo a {
@@ -98,4 +192,54 @@ main{
                 opacity: 100%;
                 background-color: var(--color-5);
         }
+}
+/* HOME PAGE */
+.home-body{
+        width: 100vw;
+        margin: 0 auto;
+        
+}
+.nav-bar{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        background-color: var(--color-1);
+        margin: 0 auto;
+        padding: 10px
+}
+.nav-bar a {
+        text-decoration: none;
+        color: white;
+        list-style-type: none;
+}
+.nav-bar li {
+        list-style-type: none;
+        font-size: 20px;
+        font-family: var(--logo-font);
+        padding-right: 40px;
+}
+.nav-logo i{
+        font-size: 50px;
+}
+.nav-bar li:hover {
+        font-weight: bolder;
+}
+.home-page-buttons{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+.add-trip-button {
+        width: 30%;
+        height: 15%;
+        margin: 70px 0px 40px 0px;
+        font-size: 30px;
+}
+.my-trips-button{
+        width: 30%;
+        height: 15%;
+        font-size: 30px;
 }
