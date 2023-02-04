@@ -5,8 +5,8 @@ from models.country import Country
 
 
 def save(country):
-    sql = "INSERT INTO countries(name) VALUES ( %s) RETURNING id"
-    values = [country.name]
+    sql = "INSERT INTO countries(name, continent_id) VALUES ( %s, %s) RETURNING id"
+    values = [country.name, country.continent_id]
     results = run_sql(sql, values)
     id = results[0]["id"]
     country.id = id
@@ -20,10 +20,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = Country(
-            row["name"],
-            row["id"],
-        )
+        country = Country(row["name"], row["continent_id"], row["id"])
         countries.append(country)
     return countries
 
@@ -35,7 +32,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(row["name"], row["id"])
+        country = Country(row["name"], row["continent_id"], row["id"])
     return country
 
 

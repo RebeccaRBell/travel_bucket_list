@@ -2,11 +2,12 @@ from db.run_sql import run_sql
 from models.trip import Trip
 from models.country import Country
 from models.city import City
+from models.continent import Continent
 
 
 def save(city):
-    sql = "INSERT INTO cities(name, country_id) VALUES ( %s, %s) RETURNING id"
-    values = [city.name, city.country_id]
+    sql = "INSERT INTO cities (name, continent_id, country_id) VALUES ( %s, %s, %s) RETURNING id"
+    values = [city.name, city.continent_id, city.country_id]
     results = run_sql(sql, values)
     id = results[0]["id"]
     city.id = id
@@ -20,7 +21,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row["name"], row["country_id"], row["id"])
+        city = City(row["name"], row["continent_id"], row["country_id"], row["id"])
         cities.append(city)
     return cities
 
@@ -32,7 +33,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        city = City(row["name"], row["country_id"], row["id"])
+        city = City(row["name"], row["continent_id"], row["country_id"], row["id"])
     return city
 
 

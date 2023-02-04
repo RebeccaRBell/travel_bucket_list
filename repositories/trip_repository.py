@@ -8,8 +8,15 @@ from repositories import country_repository
 
 
 def save(trip):
-    sql = "INSERT INTO trips(city_id, country_id, reason, season, timeframe) VALUES ( %s, %s, %s, %s, %s) RETURNING id"
-    values = [trip.city_id, trip.country_id, trip.reason, trip.season, trip.timeframe]
+    sql = "INSERT INTO trips(continent_id, country_id, city_id, reason, season, timeframe) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [
+        trip.continent_id,
+        trip.country_id,
+        trip.city_id,
+        trip.reason,
+        trip.season,
+        trip.timeframe,
+    ]
     results = run_sql(sql, values)
     id = results[0]["id"]
     trip.id = id
@@ -24,8 +31,9 @@ def select_all():
 
     for row in results:
         trip = Trip(
-            row["city_id"],
+            row["continent_id"],
             row["country_id"],
+            row["city_id"],
             row["reason"],
             row["season"],
             row["timeframe"],
@@ -43,8 +51,9 @@ def select(id):
 
     if result is not None:
         trip = Trip(
-            row["city_id"],
+            row["continent_id"],
             row["country_id"],
+            row["city_id"],
             row["reason"],
             row["season"],
             row["timeframe"],
@@ -65,6 +74,13 @@ def delete(id):
 
 
 def update(trip):
-    sql = "UPDATE trips SET (city_id, country_id, reason, season, timeframe) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [trip.city_id, trip.country_id, trip.reason, trip.season, trip.timeframe]
+    sql = "UPDATE trips SET (continent_id, country_id, city_id, reason, season, timeframe) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [
+        trip.continent_id,
+        trip.country_id,
+        trip.city_id,
+        trip.reason,
+        trip.season,
+        trip.timeframe,
+    ]
     run_sql(sql, values)

@@ -3,11 +3,18 @@
 	<div class="form background">
 		<h1>New Trip</h1>
 		<form>
-                        <label for="country">Country:</label>
+			<label for="continent">Continent:</label>
 			<select name="country">
-				{% for country in countries %}
-				<option value="{{country.id}}">{{country.name}}</option>
+				{% for continent in continents %}
+				<option value="{{continent.id}}">{{continent.name}}</option>
 				{% endfor %}
+			</select>
+			<label for="country">Country:</label>
+			<select name="country">
+				{% for continent in continents %} {% for country in countries %} {% if
+				country.continent_id == continent.id %}
+				<option value="{{country.id}}">{{country.name}}</option>
+				{% endif %} {% endfor %}{% endfor %}
 			</select>
 			<label for="city">City:</label>
 			<select name="city">
