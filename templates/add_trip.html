@@ -2,7 +2,7 @@
 <div class="new-trip-container">
 	<div class="form-background">
 		<h1>New Trip</h1>
-		<form class="new-trip-form" action="/trips" method="POST">
+		<form class="new-trip-form" action="/trips/add_trip" method="POST">
                         <form>
 			<label for="continent">Continent:</label>
 
@@ -15,7 +15,7 @@
 			</select>
 			<label for="country">Country:</label>
 			<select name="country">
-				{% for country in countries if country.continent_id ==   %}
+				{% for country in countries if country.continent_id ==  1 %}
 				<option value="{{country.id}}">{{country.name}}</option>
 				{% endfor %}
 			</select>
@@ -38,21 +38,21 @@
 				<div class="radio-questions">
 					<p>What Time of Year?</p>
 					<div>
-						<input type="radio" value="spring" name="season" /><label
+						<input type="radio" value="Spring" name="season" /><label
 							for="spring"
 							>Spring</label
 						>
 					</div>
 					<div>
-						<input type="radio" value="summer" name="season" />
+						<input type="radio" value="Summer" name="season" />
 						<label for="spring">Summer</label>
 					</div>
 					<div>
-						<input type="radio" value="autumn" name="season" />
+						<input type="radio" value="Autumn" name="season" />
 						<label for="spring">Autumn</label>
 					</div>
 					<div>
-						<input type="radio" value="winter" name="season" /><label
+						<input type="radio" value="Winter" name="season" /><label
 							for="spring"
 							>Winter</label
 						>
@@ -61,23 +61,23 @@
 				<div class="radio-questions">
 					<p>When Do You Want to Visit?</p>
 					<div>
-						<input type="radio" value="year" name="timeframe" />
+						<input type="radio" value="In the Next Year" name="timeframe" />
 						<label for="year">In the Next Year</label>
 					</div>
 					<div>
-						<input type="radio" value="2year" name="timeframe" /><label
+						<input type="radio" value="In the Next 2 Years" name="timeframe" /><label
 							for="2year"
 							>In the Next 2 Years</label
 						>
 					</div>
 					<div>
-						<input type="radio" value="5year" name="timeframe" /><label
+						<input type="radio" value="In the Next 5 Years" name="timeframe" /><label
 							for="5year"
 							>In the Next 5 Years</label
 						>
 					</div>
 					<div>
-						<input type="radio" value="10year" name="timeframe" /><label
+						<input type="radio" value="In the Next 10 Years" name="timeframe" /><label
 							for="10year"
 							>In the Next 10 Years</label
 						>
@@ -86,7 +86,7 @@
 			</div>
 			<div class="new-trip-buttons">
 				<button type="button">Back</button>
-				<button type="button">Add Trip</button>
+				<button type="submit">Add Trip</button>
 			</div>
 		</form>
 	</div>
