@@ -495,3 +495,47 @@ text-decoration: underline dotted;
         border: none;
 
 }
+.add-new-city {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+}
+.add-new-city button {
+        height: 30px;
+        width: 15%;
+        align-self: center;
+        margin: 10px;
+        background-color: var(--color-4);
+        border: none;
+        border-radius: 10px;
+}
+.add-new-city button a {
+        text-decoration: none;
+        color: black;
+}
+
+/* ADD NEW CITY */
+.add-city-container{
+        margin: 0 auto;
+        text-align: center;
+}
+.new_city_form{
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+}
+.new_city_form div{
+        margin: 15px;
+        width: 100%;
+}
+.new_city_form button{
+        width: 15%;
+        border: none;
+
+}
+.new_city_form a {
+        text-decoration: none;
+        color: black;
+}

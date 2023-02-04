@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% block content %}
+<div class="add-city-container">
+	<h1>Add New City</h1>
+	<form class="new_city_form" action="/add_new_city_country" method="POST">
+		<div>
+			<label for="new_city_continent"
+				>Which Continent is the new City in?</label
+			>
+                        <select name="new_city_continent">
+			{% for continents in continents %}
+			<option value="{{continents.id}}" name="new_city_continent" />
+				{{continents.name}}
+                        </option>
+			{% endfor %}
+                        </select>
+		</div>
+		<div>
+			<label for="new_city_country">Which Country is the new City in?</label>
+			<input type="text" name="new_city_country" />
+		</div>
+		<div>
+			<label for="new_city_name">What is the name of the City?</label>
+			<input type="text" name="new_city_name" />
+		</div>
+                <div class="add-city-buttons">
+                        <button type="button"><a href="/trips/add_trip">Nevermind</a></button>
+                <button type="submit">Add City</button>
+                </div>
+	</form>
+</div>
+{% endblock %}

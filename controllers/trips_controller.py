@@ -5,6 +5,8 @@ from repositories import city_repository
 from repositories import country_repository
 from repositories import continent_repository
 from models.trip import Trip
+from models.city import City
+from models.country import Country
 
 trips_blueprint = Blueprint("users", __name__)
 
@@ -52,4 +54,16 @@ def create_trip():
 @trips_blueprint.route("/trips/<id>/delete")
 def delete_trip(id):
     trip_repository.delete(id)
+    return redirect("/trips")
+
+
+@trips_blueprint.route("/add_new_city_country", methods=["POST"])
+def create_new_city():
+    new_continent = request.form["new_city_continent"]
+    new_country = request.form["new_city_country"]
+    new_city = request.form["new_city_name"]
+    new_city_country = Country(new_country, new_continent)
+    country_repository.save(new_city_country)
+    add_new_city = City(new_city, new_continent, new_city_country.id)
+    city_repository.save(add_new_city)
     return redirect("/trips")
