@@ -31,3 +31,12 @@ def new_trip():
     return render_template(
         "add_trip.html", continents=continents, countries=countries, cities=cities
     )
+
+
+# ADD CREATE TRIP
+
+
+@trips_blueprint.route("/trips/<id>/delete")
+def delete_trip(id):
+    trip_repository.delete(id)
+    return redirect("/trips")

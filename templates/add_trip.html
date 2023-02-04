@@ -3,7 +3,9 @@
 	<div class="form-background">
 		<h1>New Trip</h1>
 		<form class="new-trip-form" action="/trips" method="POST">
+                        <form>
 			<label for="continent">Continent:</label>
+
 			<select name="continent">
 				{% for continent in continents %}
 				<option value="{{continent.id}}" name="continent">
@@ -13,7 +15,7 @@
 			</select>
 			<label for="country">Country:</label>
 			<select name="country">
-				{% for country in countries %}
+				{% for country in countries if country.continent_id ==   %}
 				<option value="{{country.id}}">{{country.name}}</option>
 				{% endfor %}
 			</select>
