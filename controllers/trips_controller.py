@@ -15,3 +15,11 @@ def trips():
     return render_template(
         "trips.html", trips=trips, countries=countries, cities=cities
     )
+
+
+@trips_blueprint.route("/trips/add_trip")
+def new_trip():
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+
+    return render_template("add_trip.html", countries=countries, cities=cities)

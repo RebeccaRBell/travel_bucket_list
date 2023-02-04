@@ -13,6 +13,11 @@ serif;
         --color-3: #82C0CC;
         --color-4: #EDE7E3;
         --color-5: #f0991e;
+        --palette2-color-1:#14471E;
+        --palette2-color-2: #68904D;
+        --palette2-color-3: #C8D2D1;
+        --palette2-color-4: #EE9B01;
+        --palette2-color-5: #DA6A00;
         --logo-font: 'Calistoga', cursive;
         --font-1: 'Libre Baskerville',
                 serif;
@@ -307,12 +312,12 @@ main{
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        background-color: var(--color-1);
+        background-color: var(--palette2-color-5);
 }
 .trip-card{
         margin: 0 auto;
         min-width: 20%;
-        width: 35%;
+        width: 30%;
         margin: 50px 20px 20px 20px;
         padding: 10px;
         background-color: var(--color-4);
@@ -389,19 +394,38 @@ main{
 .reason, .season, .timeframe {
 
 }
-.edit-button {
-        width: 60%;
-        height: 25px;
+
+.trip-buttons{
+        display: flex;
+        flex-wrap: row nowrap;
+        align-items: center;
+        justify-content: center;
+}
+.edit-button, .edit-button a {
+        margin: 0 auto;
+        width: 50%;
+        height: 30px;
         background-color: var(--color-5);
+        border: none;
+        border-radius: 20px;
+        text-decoration: none;
+        color: var(--color-4);
+}
+.edit-button:hover, .edit-button a:hover{
+text-decoration: underline dotted;
 }
 .delete-button, .delete-button a{
         width: 25px;
         height: 25px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 0px;
         border: none;
-        font-size: 20px;
+        font-size: 25px;
         color: black;
+        background-color: transparent;
         text-decoration: none;
         text-align: right;
+}
+.delete-button:hover, .delete-button a:hover{
+        color: rgb(190, 55, 55);
 }

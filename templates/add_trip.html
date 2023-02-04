@@ -1,0 +1,21 @@
+{% extends "base.html" %}{% block content %}
+<div class="new-trip-container">
+	<div class="form background">
+		<h1>New Trip</h1>
+		<form>
+                        <label for="country">Country:</label>
+			<select name="country">
+				{% for country in countries %}
+				<option value="{{country.id}}">{{country.name}}</option>
+				{% endfor %}
+			</select>
+			<label for="city">City:</label>
+			<select name="city">
+				{% for city in cities %}
+				<option value="{{city.id}}">{{city.name}}</option>
+				{% endfor %}
+			</select>
+		</form>
+	</div>
+</div>
+{% endblock %}
