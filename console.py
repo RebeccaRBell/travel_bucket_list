@@ -30,23 +30,31 @@ country2 = Country("Spain", continent1.id)
 country3 = Country("Austria", continent1.id)
 country4 = Country("Portugal", continent1.id)
 country5 = Country("France", continent1.id)
+country6 = Country("Vietnam", continent2.id)
+country7 = Country("Japan", continent2.id)
 country_repository.save(country1)
 country_repository.save(country2)
 country_repository.save(country3)
 country_repository.save(country4)
 country_repository.save(country5)
+country_repository.save(country6)
+country_repository.save(country7)
+
 
 city1 = City("Rome", continent1.id, country1.id)
 city2 = City("Madrid", continent1.id, country2.id)
 city3 = City("Vienna", continent1.id, country3.id)
 city4 = City("Lisbon", continent1.id, country4.id)
 city5 = City("Paris", continent1.id, country5.id)
+city6 = City("Hanoi", continent2.id, country6.id)
+city7 = City("Tokyo", continent2.id, country7.id)
 city_repository.save(city1)
 city_repository.save(city2)
 city_repository.save(city3)
 city_repository.save(city4)
 city_repository.save(city5)
-
+city_repository.save(city6)
+city_repository.save(city7)
 trip1 = Trip(
     continent1.id,
     city1.id,

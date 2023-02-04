@@ -429,3 +429,69 @@ text-decoration: underline dotted;
 .delete-button:hover, .delete-button a:hover{
         color: rgb(190, 55, 55);
 }
+
+/* NEW TRIP PAGE */
+.new-trip-container{
+        width: 100vw;
+        margin: 0 auto;
+        font-family: var(--font-3);
+}
+.form-background {
+        width: 60%;
+        margin: 0 auto;
+        padding: 0px;
+        text-align: center;
+        background-color: var(--palette2-color-5);
+        margin-top: 50px;
+        border-radius: 20px;
+}
+.form-background h1{
+        padding: 20px;
+        font-family: var(--logo-font);
+        letter-spacing: 3px;
+        color: var(--color-4);
+}
+.new-trip-form{
+        text-align: center;
+        font-size: 18px;
+}
+.new-trip-form select{
+        width: 150px;
+        height: 40px;
+        border: 1px solid var(--color-5);
+        border-radius: 5px;
+        margin: 20px 10px 20px 10px;
+
+
+}
+.reason-box{
+        width: 60%;
+        height: 40px;
+        border: 1px solid var(--color-5);
+        border-radius: 5px;
+        margin: 15px;
+}
+.choice-questions{
+        display:flex;
+        flex-flow: colum nowrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        width: 80%;
+        color: var(--color-4);
+}
+.radio-questions{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+}
+.radio-questions div {
+        text-align: left;
+}
+.new-trip-buttons button{
+        width: 25%;
+        height: 30px;
+        margin: 50px 20px 20px 20px;
+        border-radius: 20px;
+        border: none;
+
+}
