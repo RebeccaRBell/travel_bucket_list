@@ -312,11 +312,11 @@ main{
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        background-color: var(--palette2-color-5);
+        background-color: var(--palette2-color-3);
 }
 .trip-card{
         margin: 0 auto;
-        min-width: 20%;
+        min-width: 25%;
         width: 30%;
         margin: 50px 20px 20px 20px;
         padding: 10px;
@@ -349,36 +349,42 @@ main{
         margin: 0 auto;
         font-family: var(--font-3);
 }
-
-
-.row-3-card{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        margin-bottom: 20px;
-        margin-top: 10px;
+.card-row-1{
+        width: 100%;
+        height: 20%;
 }
-.row-2-part-1{
+.row-2{
         width: 80%;
+        height: 150px;
         margin: 0 auto;
         margin-top: 20px;
-        align-self: center;
         text-align: center;
         color: var(--color-1);
 }
-.row-3-part-1{
-        width: 40%;
+.row-2 div {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+}
+.row-3 {
+        width: 100%;
+        height: 20%;
         margin: 0 auto;
-        margin-top: 10px;
-         align-self: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         text-align: center;
+        
+}
+.row-3-part-1{
+        width: 50%;
+        margin: 0 auto;
         color: var(--color-1);
 }
 .row-3-part-2{
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
-        align-self: center;
-        text-align: center;
         color: var(--color-1);
 }
 .question-heading{
@@ -386,13 +392,13 @@ main{
         color: var(--color-4);
         border-radius: 10px;
         padding: 5px;
-        width: 50%;
+        width: 60%;
         text-align: center;
-        display: block;
         margin: 0 auto;
 }
-.reason, .season, .timeframe {
 
+.reason, .season, .timeframe {
+        font-size:  20px;
 }
 
 .trip-buttons{
@@ -441,19 +447,23 @@ text-decoration: underline dotted;
         margin: 0 auto;
         padding: 0px;
         text-align: center;
-        background-color: var(--palette2-color-5);
-        margin-top: 50px;
+        background-color: var(--palette2-color-3);
+        margin-top: 30px;
         border-radius: 20px;
 }
 .form-background h1{
-        padding: 20px;
+        padding-top: 25px;
+        font-size: 35px;
         font-family: var(--logo-font);
         letter-spacing: 3px;
-        color: var(--color-4);
+        font-weight: 100;
+        color: var(--palette2-color-5);
 }
 .new-trip-form{
         text-align: center;
         font-size: 18px;
+        color: var(--color-1);
+        font-weight: 400;
 }
 .new-trip-form select{
         width: 150px;
@@ -461,6 +471,7 @@ text-decoration: underline dotted;
         border: 1px solid var(--color-5);
         border-radius: 5px;
         margin: 20px 10px 20px 10px;
+        font-size: 18px;
 
 
 }
@@ -477,7 +488,6 @@ text-decoration: underline dotted;
         justify-content: space-evenly;
         margin: 0 auto;
         width: 80%;
-        color: var(--color-4);
 }
 .radio-questions{
         display: flex;
@@ -493,7 +503,12 @@ text-decoration: underline dotted;
         margin: 50px 20px 20px 20px;
         border-radius: 20px;
         border: none;
+        color: var(--color-1);
 
+}
+.new-trip-buttons a {
+        text-decoration: none;
+        color: var(--color-1)
 }
 .add-new-city {
         display: flex;
