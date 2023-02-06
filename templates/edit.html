@@ -1,14 +1,22 @@
 {% extends "base.html" %}{% block content %}
 
 <div class="new-trip-container">
-	<h1>Edit Trip</h1>
 	<div class="form-background">
-		<h1>New Trip</h1>
+		<h1>Edit Trip</h1>
 		<form class="new-trip-form" action="/add_trip" method="POST">
 			<label for="continent">Continent:</label>
 			<select name="continent">
 				{% for continent in continents %}
-				<option value="{{continent.id}}" name="continent" required>
+				<option value="{{continent.id}}"
+				{%
+				if
+				trip.continent_id == continent.id
+				%}
+				selected="selected"
+				{%
+				endif
+				%}
+                                name="continent" required>
 					{{continent.name}}
 				</option>
 				{% endfor %}
@@ -16,13 +24,30 @@
 			<label for="country">Country:</label>
 			<select name="country">
 				{% for country in countries %}
-				<option value="{{country.id}}" name="country">{{country.name}}</option>
+				<option value="{{country.id}}" 
+                                {%
+				if
+				trip.country_id == country.id
+				%}
+				selected="selected"
+				{%
+				endif
+				%}
+                                name="country">{{country.name}}</option>
 				{% endfor %}
 			</select>
 			<label for="city">City:</label>
 			<select name="city">
 				{% for city in cities %}
-				<option value="{{city.id}}" name="city">{{city.name}}</option>
+				<option value="{{city.id}}"
+                                {%
+				if
+				trip.city_id == city.id
+				%}
+				selected="selected"
+				{%
+				endif
+				%} name="city">{{city.name}}</option>
 				{% endfor %}
 			</select>
 			<br />
@@ -101,7 +126,7 @@
 			</div>
 			<div class="new-trip-buttons">
 				<button type="button"><a href="/home">Back</a></button>
-				<button type="submit">Add Trip</button>
+				<button type="submit">Update</button>
 			</div>
 		</form>
 	</div>
