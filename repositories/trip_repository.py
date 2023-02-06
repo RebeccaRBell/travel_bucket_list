@@ -5,7 +5,7 @@ from models.trip import Trip
 
 
 def save(trip):
-    sql = "INSERT INTO trips ( continent_id, country_id, city_id, reason, season, timeframe, completed ) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    sql = "INSERT INTO trips ( continent_id, country_id, city_id, reason, season, timeframe, completed) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
     values = [
         trip.continent_id,
         trip.country_id,
@@ -16,7 +16,8 @@ def save(trip):
         trip.completed,
     ]
     results = run_sql(sql, values)
-    trip.id =  results[0]["id"]
+    id = results[0]["id"]
+    trip.id = id
     return trip
 
 

@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+<div class="continents-buttons"> 
+<button><a href="/view_by_continent">Back to Continents</a></button></div>
+   <div class="container">
+	{% for trips in trips if trips.continent_id == 1 %}
+	<div class="trip-card">
+                <div class="card-row-1">
+		{% for cities in cities %} {% if trips.city_id == cities.id %}
+		<p class="city">{{ cities.name }}</p>
+		{% endif %} {% endfor %} {% for countries in countries %} {% if
+		trips.country_id == countries.id %}
+		<p class="country">{{countries.name}}</p>
+		{% endif %} {% endfor %}
+                </div>
+			<div class="row-2">
+				<p class="question-heading">Reasons To Go:</p>
+                                <div>
+				<p class="reason">{{trips.reason}}</p>
+                                </div>
+			</div>
+                        <div class="row-3">
+                                <div class="row-3-part-2">
+				<p class="question-heading">When:</p>
+				<p class="timeframe">{{trips.timeframe}}</p>
+			</div>
+                        <div class="row-3-part-2">
+				<p class="question-heading">Season:</p>
+				<p class="season">{{trips.season}}</p>
+			</div>
+                        </div>
+		<hr />
+		<div class="trip-buttons">
+			<button class="edit-button"><a href="/trip/id/edit">Edit Trip</a></button>
+			<button class="delete-button">
+				<a href="/trip/{{trips.id}}/delete"><i class="fa-regular fa-circle-xmark"></i></a></i>
+			</button>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+ {% endblock %}

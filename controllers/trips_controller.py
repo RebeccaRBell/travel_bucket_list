@@ -92,3 +92,33 @@ def future_trips():
     return render_template(
         "future.html", trips=trips, countries=countries, cities=cities
     )
+
+
+@trips_blueprint.route("/view_by_continent/europe")
+def europe():
+    continents = continent_repository.select_all()
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "continents/europe.html",
+        continents=continents,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/asia")
+def asia():
+    continents = continent_repository.select_all()
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "continents/asia.html",
+        continents=continents,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )

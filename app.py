@@ -36,5 +36,12 @@ def future_trips():
     return render_template("future.html")
 
 
+@app.route("/view_by_continent")
+def trips_by_continent():
+    return render_template(
+        "continent_trips.html",
+    )
+
+
 if __name__ == "__main__":
     app.run(debug=True)

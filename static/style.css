@@ -217,7 +217,7 @@ main{
         width: 100vw;
         height: 80vh;
         margin: 0 auto;
-        background-color: ghostwhite;
+        background-color: var(--palette2-color-3)
 }
 .nav-bar{
         display: flex;
@@ -263,7 +263,7 @@ main{
 .my-trips-button {
         width: 30%;
         height: 20%;
-        margin: 150px 0px 60px 0px;
+        margin: 150px 0px 30px 0px;
         font-size: 40px;
         border-radius: 50px;
         border: none;
@@ -279,7 +279,7 @@ main{
 .my-trips-button:hover{
         cursor: pointer;
         box-shadow: 0px 0px 0px 0px var(--color-5);
-        margin: 155px 0px 55px 0px;
+        margin: 155px 0px 25px 0px;
 
 
 }
@@ -288,6 +288,7 @@ main{
         height: 20%;
         font-size: 40px;
         border-radius: 50px;
+        margin: 0px 0px 30px 0px;
         border: none;
         box-shadow: 1px 5px 2px 1px var(--color-5);
         background-color: var(--color-1);
@@ -301,7 +302,29 @@ main{
 .add-trip-button:hover {
         cursor: pointer;
         box-shadow: 0px 0px 0px 0px var(--color-2);
-        margin-top: 5px;
+        margin: 5px 0px 25px 0px;
+}
+.view-by-continent-button{
+        width: 30%;
+        height: 20%;
+        font-size: 40px;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 1px 5px 2px 1px var(--color-5);
+        background-color: var(--color-1);
+        font-family: var(--font-3);
+        font-weight: 300;
+}
+.view-by-continent-button a {
+        text-decoration: none;
+        color: var(--color-4);
+}
+
+.view-by-continent-button:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 0px var(--color-2);
+        margin: 5px 0px 0px 0px;
+
 }
 /* TRIPS PAGE */
 .all-trips {
@@ -313,7 +336,9 @@ main{
         font-size: 40px;
         text-align: center;
         margin: 0 auto;
-        padding-top: 30px;
+        padding: 50px 0px 30px 0px;
+        color: var(--color-1)
+
 }
 .completed-buttons{
         margin: 0 auto;
@@ -325,12 +350,17 @@ main{
 }
 .completed-buttons a{
         text-decoration: none;
-        color: black;
+        color: var(--color-1);
+        font-size: 20px;
 }
 .completed-buttons button{
         width: 150px;
-        height: 30px;
-        margin: 50px;
+        height: 40px;
+        margin: 30px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--color-4)
+
 }
 .container{
         width: 100vw;
@@ -477,7 +507,7 @@ text-decoration: underline dotted;
         margin: 0 auto;
         padding: 0px;
         text-align: center;
-        background-color: var(--palette2-color-3);
+        background-color: var(--color-4);
         margin-top: 30px;
         border-radius: 20px;
 }
@@ -541,6 +571,11 @@ text-decoration: underline dotted;
         text-decoration: none;
         color: var(--color-1)
 }
+.new-trip-buttons button:hover{
+        background-color: var(--palette2-color-5);
+        color: var(--color-4);
+        cursor: pointer;
+}
 .completed-trip{
         display: flex;
         flex-flow: column nowrap;
@@ -600,7 +635,8 @@ text-decoration: underline dotted;
         font-size: 40px;
         text-align: center;
         margin: 0 auto;
-        padding-top: 30px;
+        padding: 50px 0px 30px 0px;
+        color: var(--color-1)
 }
 
 
@@ -615,5 +651,39 @@ text-decoration: underline dotted;
         font-size: 40px;
         text-align: center;
         margin: 0 auto;
-        padding-top: 30px;
+        padding: 50px 0px 30px 0px;
+        color: var(--color-1)
+}
+/* VIEW BY CONTINENTS PAGE */
+.continent-trips h1{
+        text-align: center;
+        padding: 50px 0px 20px 0px;
+        color: var(--color-1);
+        font-family: var(--logo-font);
+        font-weight: 100;
+
+}
+.continents-buttons {
+        width: 80vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+}
+.continents-buttons a {
+        text-decoration: none;
+        color: var(--palette2-color-5);
+}
+.continents-buttons button {
+        width: 250px;
+        height: 60px;
+        margin: 30px;
+        border:none;
+        background-color: var(--color-4);
+        font-size: 25px;
+        border-radius: 10px;
+}
+.continents-buttons button:hover{
+        text-decoration: underline dotted;
 }
