@@ -27,16 +27,16 @@ def select_all():
     sql = "SELECT * FROM trips"
     results = run_sql(sql)
 
-    for row in results:
+    for result in results:
         trip = Trip(
-            row["continent_id"],
-            row["country_id"],
-            row["city_id"],
-            row["reason"],
-            row["season"],
-            row["timeframe"],
-            row["completed"],
-            row["id"],
+            result["continent_id"],
+            result["country_id"],
+            result["city_id"],
+            result["reason"],
+            result["season"],
+            result["timeframe"],
+            result["completed"],
+            result["id"],
         )
         trips.append(trip)
     return trips
@@ -50,14 +50,14 @@ def select(id):
 
     if result is not None:
         trip = Trip(
-            row["continent_id"],
-            row["country_id"],
-            row["city_id"],
-            row["reason"],
-            row["season"],
-            row["timeframe"],
-            row["completed"],
-            row["id"],
+            result["continent_id"],
+            result["country_id"],
+            result["city_id"],
+            result["reason"],
+            result["season"],
+            result["timeframe"],
+            result["completed"],
+            result["id"],
         )
     return trip
 

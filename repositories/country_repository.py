@@ -35,7 +35,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(row["name"], row["continent_id"], row["id"])
+        country = Country(result["name"], result["continent_id"], result["id"])
     return country
 
 

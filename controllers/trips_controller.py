@@ -58,6 +58,23 @@ def create_trip():
     return redirect("/trips")
 
 
+@trips_blueprint.route("/trips/<id>/edit")
+def edit_trip(id):
+    trip = trip_repository.select(id)
+    continents = continent_repository.select_all()
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "edit.html",
+        trip=trip,
+        continents=continents,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
 @trips_blueprint.route("/trips/<id>/delete")
 def delete_trip(id):
     trip_repository.delete(id)
