@@ -17,7 +17,7 @@
 		<div>
 			<label for="city_country">Which Country is the new City in?</label>
                         <select name="city_country">
-                                {% for countries in countries if countries.continent_id == 1%}
+                                {% for countries in countries %}
                         <option value="{{countries.id}}" name="city_country">
                                 {{countries.name}}
                         </option>

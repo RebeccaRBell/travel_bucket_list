@@ -17,7 +17,7 @@ serif;
         --palette2-color-2: #68904D;
         --palette2-color-3: #C8D2D1;
         --palette2-color-4: #EE9B01;
-        --palette2-color-5: #DA6A00;
+        --palette2-color-5: #e46e00;
         --logo-font: 'Calistoga', cursive;
         --font-1: 'Libre Baskerville',
                 serif;
@@ -303,8 +303,35 @@ main{
         box-shadow: 0px 0px 0px 0px var(--color-2);
         margin-top: 5px;
 }
-
 /* TRIPS PAGE */
+.all-trips {
+        background-color: var(--palette2-color-3);
+        margin: 0 auto;
+}
+
+.all-trips h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30px;
+}
+.completed-buttons{
+        margin: 0 auto;
+        padding: 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        background-color: var(--palette2-color-3);
+}
+.completed-buttons a{
+        text-decoration: none;
+        color: black;
+}
+.completed-buttons button{
+        width: 150px;
+        height: 30px;
+        margin: 50px;
+}
 .container{
         width: 100vw;
         margin: auto;
@@ -416,21 +443,24 @@ main{
         border-radius: 20px;
         text-decoration: none;
         color: var(--color-4);
+        margin: 10px;
 }
 .edit-button:hover, .edit-button a:hover{
 text-decoration: underline dotted;
 }
 .delete-button, .delete-button a{
-        width: 25px;
-        height: 25px;
+        width: 40px;
+        height: 40px;
         margin: 0 auto;
         padding: 0px;
         border: none;
-        font-size: 25px;
+        font-size: 30px;
+        text-align: center;
         color: black;
         background-color: transparent;
         text-decoration: none;
         text-align: right;
+        margin: 10px;
 }
 .delete-button:hover, .delete-button a:hover{
         color: rgb(190, 55, 55);
@@ -457,7 +487,8 @@ text-decoration: underline dotted;
         font-family: var(--logo-font);
         letter-spacing: 3px;
         font-weight: 100;
-        color: var(--palette2-color-5);
+        color: var(--palette2-color-5
+        );
 }
 .new-trip-form{
         text-align: center;
@@ -510,6 +541,11 @@ text-decoration: underline dotted;
         text-decoration: none;
         color: var(--color-1)
 }
+.completed-trip{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+}
 .add-new-city {
         display: flex;
         flex-flow: row nowrap;
@@ -553,4 +589,31 @@ text-decoration: underline dotted;
 .new_city_form a {
         text-decoration: none;
         color: black;
+}
+
+/* FUTURE TRIPS PAGE */
+.future{
+        background-color: var(--palette2-color-3);
+        margin: 0 auto;
+}
+.future h1{
+        font-size: 40px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30px;
+}
+
+
+
+/* PAST TRIPS PAGE */
+.past {
+        background-color: var(--palette2-color-3);
+        margin: 0 auto;
+}
+
+.past h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30px;
 }

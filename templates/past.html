@@ -1,13 +1,14 @@
-{% extends "base.html" %} {% block content %}
-<div class="all-trips">
-        <h1>All Trips</h1>
+{% extends "base.html" %} {% block content %} 
+<div class="past">
+<h1>Past Trips</h1>
 </div>
 <div class="completed-buttons">
-                <button><a href="/past">Past Trips</a></button>
+        <button><a href="/trips">All Trips</a></button>
                 <button><a href="/future">Future Trips</a></button>
-        </div>
-        <div class="container">
-	{% for trips in trips %}
+                
+</div>
+<div class="container">
+        {% for trips in trips if trips.completed == "yes" %}
 	<div class="trip-card">
                 <div class="card-row-1">
 		{% for cities in cities %} {% if trips.city_id == cities.id %}

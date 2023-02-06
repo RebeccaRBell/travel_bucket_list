@@ -9,6 +9,7 @@ import repositories.city_repository as city_repository
 import repositories.trip_repository as trip_repository
 import repositories.continent_repository as continent_repository
 
+
 continent1 = Continent("Europe")
 continent2 = Continent("Asia")
 continent3 = Continent("Africa")
@@ -62,6 +63,7 @@ trip1 = Trip(
     "Food, Culture",
     "Spring",
     "In the next year",
+    "yes",
 )
 trip2 = Trip(
     continent1.id,
@@ -70,6 +72,7 @@ trip2 = Trip(
     "Architecture, History",
     "Autumn",
     "In the next 2 years",
+    "yes",
 )
 trip3 = Trip(
     continent1.id,
@@ -78,7 +81,18 @@ trip3 = Trip(
     "History, Scenery",
     "Winter",
     "In the next year",
+    "no",
+)
+trip4 = Trip(
+    continent2.id,
+    country7.id,
+    city7.id,
+    "Technology, Culture, Cherry Blossoms, Food",
+    "Spring",
+    "In the next 5 years",
+    "no",
 )
 trip_repository.save(trip1)
 trip_repository.save(trip2)
 trip_repository.save(trip3)
+trip_repository.save(trip4)

@@ -21,5 +21,20 @@ def home():
     return render_template("base.html")
 
 
+@app.route("/add_trip")
+def add_trip_page():
+    return render_template("add_trip.html")
+
+
+@app.route("/past")
+def past_trips():
+    return render_template("past.html")
+
+
+@app.route("/future")
+def future_trips():
+    return render_template("future.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

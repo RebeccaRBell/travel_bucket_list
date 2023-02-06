@@ -2,13 +2,10 @@ from db.run_sql import run_sql
 from models.country import Country
 from models.city import City
 from models.trip import Trip
-from repositories import trip_repository
-from repositories import city_repository
-from repositories import country_repository
 
 
 def save(trip):
-    sql = "INSERT INTO trips(continent_id, country_id, city_id, reason, season, timeframe) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
+    sql = "INSERT INTO trips ( continent_id, country_id, city_id, reason, season, timeframe, completed ) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
     values = [
         trip.continent_id,
         trip.country_id,
@@ -16,10 +13,10 @@ def save(trip):
         trip.reason,
         trip.season,
         trip.timeframe,
+        trip.completed,
     ]
     results = run_sql(sql, values)
-    id = results[0]["id"]
-    trip.id = id
+    trip.id =  results[0]["id"]
     return trip
 
 
@@ -37,6 +34,7 @@ def select_all():
             row["reason"],
             row["season"],
             row["timeframe"],
+            row["completed"],
             row["id"],
         )
         trips.append(trip)
@@ -57,6 +55,7 @@ def select(id):
             row["reason"],
             row["season"],
             row["timeframe"],
+            row["completed"],
             row["id"],
         )
     return trip
@@ -74,7 +73,7 @@ def delete(id):
 
 
 def update(trip):
-    sql = "UPDATE trips SET (continent_id, country_id, city_id, reason, season, timeframe) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE trips SET (continent_id, country_id, city_id, reason, season, timeframe, completed) = (%s, %s, %s, %s, %s, %s %s) WHERE id = %s"
     values = [
         trip.continent_id,
         trip.country_id,
@@ -82,5 +81,6 @@ def update(trip):
         trip.reason,
         trip.season,
         trip.timeframe,
+        trip.completed,
     ]
     run_sql(sql, values)

@@ -26,7 +26,7 @@ def trips():
     )
 
 
-@trips_blueprint.route("/trips/add_trip")
+@trips_blueprint.route("/add_trip")
 def new_trip():
     continents = continent_repository.select_all()
     countries = country_repository.select_all()
@@ -36,7 +36,7 @@ def new_trip():
     )
 
 
-@trips_blueprint.route("/trips/add_trip", methods=["POST"])
+@trips_blueprint.route("/add_trip", methods=["POST"])
 def create_trip():
     new_continent = request.form["continent"]
     new_country = request.form["country"]
@@ -44,8 +44,15 @@ def create_trip():
     new_reason = request.form["reason"]
     new_season = request.form["season"]
     new_timeframe = request.form["timeframe"]
+    new_completed = request.form["completed"]
     new_trip = Trip(
-        new_continent, new_country, new_city, new_reason, new_season, new_timeframe
+        new_continent,
+        new_country,
+        new_city,
+        new_reason,
+        new_season,
+        new_timeframe,
+        new_completed,
     )
     trip_repository.save(new_trip)
     return redirect("/trips")
@@ -67,3 +74,21 @@ def create_new_city():
     add_new_city = City(new_city, new_continent, new_city_country.id)
     city_repository.save(add_new_city)
     return redirect("/trips")
+
+
+@trips_blueprint.route("/past")
+def past_trips():
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template("past.html", trips=trips, countries=countries, cities=cities)
+
+
+@trips_blueprint.route("/future")
+def future_trips():
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "future.html", trips=trips, countries=countries, cities=cities
+    )

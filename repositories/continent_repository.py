@@ -9,7 +9,7 @@ from repositories import country_repository
 
 
 def save(continent):
-    sql = "INSERT INTO continents (name) VALUES ( %s) RETURNING id"
+    sql = "INSERT INTO continents (name) VALUES (%s) RETURNING id"
     values = [continent.name]
     results = run_sql(sql, values)
     id = results[0]["id"]

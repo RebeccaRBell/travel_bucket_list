@@ -2,33 +2,33 @@
 <div class="new-trip-container">
 	<div class="form-background">
 		<h1>New Trip</h1>
-		<form class="new-trip-form" action="/trips/add_trip" method="POST">
-                        <form>
+		<form class="new-trip-form" action="/add_trip" method="POST">
 			<label for="continent">Continent:</label>
-
 			<select name="continent">
 				{% for continent in continents %}
-				<option value="{{continent.id}}" name="continent">
+				<option value="{{continent.id}}" name="continent" required>
 					{{continent.name}}
 				</option>
 				{% endfor %}
 			</select>
 			<label for="country">Country:</label>
 			<select name="country">
-				{% for country in countries if country.continent_id ==  1 %}
-				<option value="{{country.id}}">{{country.name}}</option>
+				{% for country in countries %}
+				<option value="{{country.id}}" name="country">{{country.name}}</option>
 				{% endfor %}
 			</select>
 			<label for="city">City:</label>
 			<select name="city">
 				{% for city in cities %}
-				<option value="{{city.id}}">{{city.name}}</option>
+				<option value="{{city.id}}" name="city">{{city.name}}</option>
 				{% endfor %}
 			</select>
 			<br />
-                        <div class="add-new-city">
-                        <p>Don't see the City you're looking for?</p>
-                        <button><a href="/add_new_city_country">Add New City</a></button></div><br>
+			<div class="add-new-city">
+				<p>Don't see the City you're looking for?</p>
+				<button><a href="/add_new_city_country">Add New City</a></button>
+			</div>
+			<br />
 			<label for="reason">Reasons To Visit:</label>
 			<input
 				class="reason-box"
@@ -48,15 +48,15 @@
 					</div>
 					<div>
 						<input type="radio" value="Summer" name="season" />
-						<label for="spring">Summer</label>
+						<label for="summer">Summer</label>
 					</div>
 					<div>
 						<input type="radio" value="Autumn" name="season" />
-						<label for="spring">Autumn</label>
+						<label for="autumn">Autumn</label>
 					</div>
 					<div>
 						<input type="radio" value="Winter" name="season" /><label
-							for="spring"
+							for="winter"
 							>Winter</label
 						>
 					</div>
@@ -68,23 +68,33 @@
 						<label for="year">In the Next Year</label>
 					</div>
 					<div>
-						<input type="radio" value="In the Next 2 Years" name="timeframe" /><label
-							for="2year"
-							>In the Next 2 Years</label
-						>
+						<input
+							type="radio"
+							value="In the Next 2 Years"
+							name="timeframe"
+						/><label for="2year">In the Next 2 Years</label>
 					</div>
 					<div>
-						<input type="radio" value="In the Next 5 Years" name="timeframe" /><label
-							for="5year"
-							>In the Next 5 Years</label
-						>
+						<input
+							type="radio"
+							value="In the Next 5 Years"
+							name="timeframe"
+						/><label for="5year">In the Next 5 Years</label>
 					</div>
 					<div>
-						<input type="radio" value="In the Next 10 Years" name="timeframe" /><label
-							for="10year"
-							>In the Next 10 Years</label
-						>
+						<input
+							type="radio"
+							value="In the Next 10 Years"
+							name="timeframe"
+						/><label for="10year">In the Next 10 Years</label>
 					</div>
+				</div>
+				<div class="completed-trip">
+					<label for="completed">Have you already been on this trip?</label>
+					<select name="completed">
+						<option value="no" name="completed">No</option>
+						<option value="yes" name="completed">Yes</option>
+					</select>
 				</div>
 			</div>
 			<div class="new-trip-buttons">

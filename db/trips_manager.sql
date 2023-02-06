@@ -21,5 +21,6 @@ CREATE TABLE trips (
         reason TEXT,
         season VARCHAR(255),
         timeframe VARCHAR(255),
+        completed VARCHAR(255),
         id SERIAL PRIMARY KEY
 );
