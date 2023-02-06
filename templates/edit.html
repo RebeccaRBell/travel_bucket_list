@@ -24,7 +24,7 @@
 			<label for="country">Country:</label>
 			<select name="country">
 				{% for country in countries %}
-				<option value="{{country.id}}" 
+				<option value="{{country.id}}"
                                 {%
 				if
 				trip.country_id == country.id
@@ -33,7 +33,7 @@
 				{%
 				endif
 				%}
-                                name="country">{{country.name}}</option>
+                                name="country" required>{{country.name}}</option>
 				{% endfor %}
 			</select>
 			<label for="city">City:</label>
@@ -47,7 +47,7 @@
 				selected="selected"
 				{%
 				endif
-				%} name="city">{{city.name}}</option>
+				%} name="city" required>{{city.name}}</option>
 				{% endfor %}
 			</select>
 			<br />
@@ -62,6 +62,7 @@
 				type="text"
 				name="reason"
 				placeholder="Sightseeing, Architecture, Culture..."
+                                value="{{trip.reason}}"
 			/>
 			<br />
 			<div class="choice-questions">

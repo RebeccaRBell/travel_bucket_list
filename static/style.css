@@ -456,6 +456,7 @@ main{
 
 .reason, .season, .timeframe {
         font-size:  20px;
+        font-family: var(--font-3);
 }
 
 .trip-buttons{
@@ -664,6 +665,8 @@ text-decoration: underline dotted;
 
 }
 .continents-buttons {
+        margin: 0 auto;
+        width: 80vw;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
