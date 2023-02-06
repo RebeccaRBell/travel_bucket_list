@@ -264,7 +264,7 @@ main{
         width: 30%;
         height: 20%;
         margin: 150px 0px 30px 0px;
-        font-size: 40px;
+        font-size: 35px;
         border-radius: 50px;
         border: none;
         background-color:var(--color-1);
@@ -286,7 +286,7 @@ main{
 .add-trip-button{
         width: 30%;
         height: 20%;
-        font-size: 40px;
+        font-size: 35px;
         border-radius: 50px;
         margin: 0px 0px 30px 0px;
         border: none;
@@ -307,7 +307,7 @@ main{
 .view-by-continent-button{
         width: 30%;
         height: 20%;
-        font-size: 40px;
+        font-size: 35px;
         border-radius: 50px;
         border: none;
         box-shadow: 1px 5px 2px 1px var(--color-5);
@@ -340,7 +340,7 @@ main{
         color: var(--color-1)
 
 }
-.completed-buttons{
+.visited-buttons{
         margin: 0 auto;
         padding: 0px;
         display: flex;
@@ -348,14 +348,14 @@ main{
         justify-content: center;
         background-color: var(--palette2-color-3);
 }
-.completed-buttons a{
+.visited-buttons a{
         text-decoration: none;
         color: var(--color-1);
         font-size: 20px;
 }
-.completed-buttons button{
+.visited-buttons button{
         width: 150px;
-        height: 40px;
+        height: 50px;
         margin: 30px;
         border: none;
         border-radius: 10px;
@@ -664,12 +664,10 @@ text-decoration: underline dotted;
 
 }
 .continents-buttons {
-        width: 80vw;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
 }
 .continents-buttons a {
         text-decoration: none;

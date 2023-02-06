@@ -39,9 +39,9 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        continent = continent(
-            row["name"],
-            row["id"],
+        continent = Continent(
+            result["name"],
+            result["id"],
         )
     return continent
 

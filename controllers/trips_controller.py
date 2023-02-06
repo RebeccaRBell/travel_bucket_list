@@ -95,29 +95,104 @@ def future_trips():
 
 
 @trips_blueprint.route("/view_by_continent/europe")
-def europe():
-    continents = continent_repository.select_all()
+def europe_trips():
+    continent = 1
     countries = country_repository.select_all()
     cities = city_repository.select_all()
     trips = trip_repository.select_all()
     return render_template(
-        "continents/europe.html",
-        continents=continents,
+        "show_trips_by_continent.html",
+        continent=continent,
         countries=countries,
         cities=cities,
         trips=trips,
     )
 
 
-@trips_blueprint.route("/asia")
-def asia():
-    continents = continent_repository.select_all()
+@trips_blueprint.route("/view_by_continent/asia")
+def asia_trips():
+    continent = 2
     countries = country_repository.select_all()
     cities = city_repository.select_all()
     trips = trip_repository.select_all()
     return render_template(
-        "continents/asia.html",
-        continents=continents,
+        "show_trips_by_continent.html",
+        continent=continent,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/view_by_continent/africa")
+def africa_trips():
+    continent = 3
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "show_trips_by_continent.html",
+        continent=continent,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/view_by_continent/north_america")
+def north_america_trips():
+    continent = 4
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "show_trips_by_continent.html",
+        continent=continent,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/view_by_continent/south_america")
+def south_america_trips():
+    continent = 5
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "show_trips_by_continent.html",
+        continent=continent,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/view_by_continent/oceania")
+def oceania_trips():
+    continent = 6
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "show_trips_by_continent.html",
+        continent=continent,
+        countries=countries,
+        cities=cities,
+        trips=trips,
+    )
+
+
+@trips_blueprint.route("/view_by_continent/antarctica")
+def antarctica_trips():
+    continent = 7
+    countries = country_repository.select_all()
+    cities = city_repository.select_all()
+    trips = trip_repository.select_all()
+    return render_template(
+        "show_trips_by_continent.html",
+        continent=continent,
         countries=countries,
         cities=cities,
         trips=trips,
