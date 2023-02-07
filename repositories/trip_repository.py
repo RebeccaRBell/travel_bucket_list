@@ -3,7 +3,6 @@ from models.country import Country
 from models.city import City
 from models.trip import Trip
 from models.continent import Continent
-from controllers import trips_controller
 
 
 def save(trip):
@@ -104,6 +103,6 @@ def mark_visited(id):
             result["season"],
             result["timeframe"],
             "yes",
-            result["id"],
+            id,
         )
     return trip

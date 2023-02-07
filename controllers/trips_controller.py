@@ -87,7 +87,6 @@ def update_trip(id):
     season = request.form["season"]
     timeframe = request.form["timeframe"]
     completed = "no"
-
     updated_trip = Trip(
         continent, country, city, reason, season, timeframe, completed, id
     )
@@ -103,7 +102,10 @@ def delete_trip(id):
 
 @trips_blueprint.route("/trips/<id>/mark_visited")
 def mark_visited(id):
-    trip_repository.mark_visited(id)
+    trip = trip_repository.select(id)
+    marked = trip_repository.mark_visited(trip.id)
+    trip_repository.update(marked)
+
     return redirect("/trips")
 
 
