@@ -92,7 +92,18 @@ trip4 = Trip(
     "In the next 5 years",
     "no",
 )
+trip4 = Trip(
+    continent2.id,
+    country7.id,
+    city7.id,
+    "Technology, Culture, Cherry Blossoms, Food",
+    "Spring",
+    "In the next 10 years",
+    "no",
+)
 trip_repository.save(trip1)
 trip_repository.save(trip2)
 trip_repository.save(trip3)
 trip_repository.save(trip4)
+
+trip_repository.update(trip4)

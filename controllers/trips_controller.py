@@ -61,7 +61,7 @@ def create_trip():
     return redirect("/trips")
 
 
-@trips_blueprint.route("/trips/<id>/edit")
+@trips_blueprint.route("/trips/<id>")
 def edit_trip(id):
     trip = trip_repository.select(id)
     continents = continent_repository.select_all()
@@ -86,11 +86,12 @@ def update_trip(id):
     reason = request.form["reason"]
     season = request.form["season"]
     timeframe = request.form["timeframe"]
-    completed = request.form["completed"]
+    completed = "no"
+
     updated_trip = Trip(
         continent, country, city, reason, season, timeframe, completed, id
     )
-    trip_repository.save(updated_trip)
+    trip_repository.update(updated_trip)
     return redirect("/trips")
 
 

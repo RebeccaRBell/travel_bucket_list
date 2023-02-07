@@ -75,7 +75,7 @@ def delete(id):
 
 
 def update(trip):
-    sql = "UPDATE trips SET (continent_id, country_id, city_id, reason, season, timeframe, completed) = (%s, %s, %s, %s, %s, %s %s) WHERE id = %s"
+    sql = "UPDATE trips SET (continent_id, country_id, city_id, reason, season, timeframe, completed) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [
         trip.continent_id,
         trip.country_id,
@@ -84,6 +84,7 @@ def update(trip):
         trip.season,
         trip.timeframe,
         trip.completed,
+        trip.id,
     ]
     run_sql(sql, values)
 

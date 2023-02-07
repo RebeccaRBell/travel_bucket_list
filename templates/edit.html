@@ -3,7 +3,7 @@
 <div class="new-trip-container">
 	<div class="form-background">
 		<h1>Edit Trip</h1>
-		<form class="new-trip-form" action="/trips/{{trip.id}}" method="POST">
+		<form class="new-trip-form" action="/trips/{{trip.id}}" method="post">
 			<label for="continent">Continent:</label>
 			<select name="continent">
 				{% for continent in continents %}
@@ -70,7 +70,7 @@
 					<p>What Time of Year?</p>
 					<div>
 						<input type="radio" value="Spring"
-                                                 name="season" /><label
+                                                 name="season" required /><label
 							for="spring"
 							>Spring</label
 						>
@@ -93,7 +93,7 @@
 				<div class="radio-questions">
 					<p>When Do You Want to Visit?</p>
 					<div>
-						<input type="radio" value="In the Next Year" name="timeframe" />
+						<input type="radio" value="In the Next Year" name="timeframe" required/>
 						<label for="year">In the Next Year</label>
 					</div>
 					<div>
