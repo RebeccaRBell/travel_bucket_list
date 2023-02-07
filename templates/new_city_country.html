@@ -17,13 +17,13 @@
 		<div>
 			<label for="city_country">Which Country is the new City in?</label>
                         <select name="city_country">
-                                {% for countries in countries %}
+                                {% for countries in countries if countries.continent_id == 1%}
                         <option value="{{countries.id}}" name="city_country">
                                 {{countries.name}}
                         </option>
                         {% endfor %}
-                        </select>
-                        <label for="new_city_country">Not in the list? Add in here:</label>
+                        </select><br>
+                        <label for="new_city_country"><b>Not in the list?</b> Add in here:</label>
 			<input type="text" name="new_city_country" />
 		</div>
 		<div>
@@ -31,7 +31,7 @@
 			<input type="text" name="new_city_name" />
 		</div>
                 <div class="add-city-buttons">
-                        <button type="button"><a href="/trips/add_trip">Nevermind</a></button>
+                <button type="button"><a href="/add_trip">Nevermind</a></button>
                 <button type="submit">Add City</button>
                 </div>
 	</form>

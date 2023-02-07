@@ -337,7 +337,9 @@ main{
         text-align: center;
         margin: 0 auto;
         padding: 50px 0px 30px 0px;
-        color: var(--color-1)
+        color: var(--color-1);
+        font-family: var(--logo-font);
+        font-weight: 500;
 
 }
 .visited-buttons{
@@ -388,10 +390,9 @@ main{
         margin: 0 auto;
         min-width: 25%;
         width: 30%;
-        margin: 50px 20px 20px 20px;
+        margin: 40px 20px 20px 20px;
         padding: 10px;
         background-color: var(--color-4);
-        color: ghostwhite;
         border-radius: 20px;
 }
  .city{
@@ -425,7 +426,7 @@ main{
 }
 .row-2{
         width: 80%;
-        height: 150px;
+        height: 140px;
         margin: 0 auto;
         margin-top: 20px;
         text-align: center;
@@ -465,11 +466,22 @@ main{
         width: 60%;
         text-align: center;
         margin: 0 auto;
+        font-family: var(--logo-font);
+        font-weight: 100;
+        letter-spacing: 1px;
 }
 
-.reason, .season, .timeframe {
-        font-size:  20px;
+.reason {
+        font-size: 18px;
         font-family: var(--font-3);
+        font-weight: 400;
+}
+
+
+.season, .timeframe {
+        font-size:  15px;
+        font-family: var(--font-3);
+        font-weight: 400;
 }
 
 .trip-buttons {
@@ -528,7 +540,7 @@ main{
 .form-background h1{
         padding-top: 25px;
         font-size: 35px;
-        font-family: var(--font-2);
+        font-family: var(--logo-font);
         letter-spacing: 2px;
         font-weight: 500;
         color: var(--palette2-color-5
@@ -636,27 +648,59 @@ main{
         margin: 0 auto;
         text-align: center;
 }
+.add-city-container h1{
+        font-family: var(--logo-font);
+        font-weight: 100;
+        color: var(--color-1);
+        font-size: 40px;
+}
 .new_city_form{
+        width: 60%;
         display: flex;
         flex-flow: column nowrap;
         text-align: center;
         margin: 0 auto;
         font-size: 18px;
+        background-color: var(--color-4);
+        border-radius: 10px;
+        font-family: var(--font-3);
+        font-weight: 300;
 }
 .new_city_form div{
         margin: 15px;
         width: 100%;
 }
+.new_city_form input, .new_city_form option, .new_city_form select {
+        font-family: var(--font-3);
+        font-weight: 300;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+}
 .new_city_form button{
         width: 15%;
+        height: 30px;
+        margin: 10px;
         border: none;
+        background-color: var(--palette2-color-5);
+        font-family: var(--font-3);
+        color: var(--color-4);
+        font-weight: 300;
+        font-size: 16px;
+        border-radius: 5px;
 
 }
 .new_city_form a {
         text-decoration: none;
-        color: black;
+        color: var(--color-4);
 }
-
+.new_city_form button:hover{
+        text-decoration: underline dotted;
+        cursor: pointer;
+}
 /* FUTURE TRIPS PAGE */
 .future{
         background-color: var(--palette2-color-3);
