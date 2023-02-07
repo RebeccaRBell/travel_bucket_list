@@ -22,8 +22,10 @@ def select_all():
     for row in results:
         country = Country(
             row["name"],
-            row["id"],
+            row["continent_id"],
+            row["id"]
         )
+        print(country.id)
         countries.append(country)
     return countries
 

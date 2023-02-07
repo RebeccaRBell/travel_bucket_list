@@ -2,7 +2,7 @@
 <div class="new-trip-container">
 	<div class="form-background">
 		<h1>New Trip</h1>
-		<form class="new-trip-form" action="/add_trip" method="POST">
+		<form class="new-trip-form" action="/trips" method="POST">
 			<label for="continent">Continent:</label>
 			<select name="continent">
 				{% for continent in continents %}
@@ -14,13 +14,15 @@
 			<label for="country">Country:</label>
 			<select name="country">
 				{% for country in countries %}
-				<option value="{{country.id}}" name="country">{{country.name}}</option>
+				<option value="{{country.id}}" name="country" required>
+					{{country.name}}
+				</option>
 				{% endfor %}
 			</select>
 			<label for="city">City:</label>
 			<select name="city">
 				{% for city in cities %}
-				<option value="{{city.id}}" name="city">{{city.name}}</option>
+				<option value="{{city.id}}" name="city" required>{{city.name}}</option>
 				{% endfor %}
 			</select>
 			<br />
@@ -64,7 +66,7 @@
 				<div class="radio-questions">
 					<p>When Do You Want to Visit?</p>
 					<div>
-						<input type="radio" value="In the Next Year" name="timeframe" />
+						<input type="radio" value="In the Next Year" name="timeframe" required />
 						<label for="year">In the Next Year</label>
 					</div>
 					<div>
@@ -89,13 +91,7 @@
 						/><label for="10year">In the Next 10 Years</label>
 					</div>
 				</div>
-				<div class="completed-trip">
-					<label for="completed">Have you already been on this trip?</label>
-					<select name="completed">
-						<option value="no" name="completed">No</option>
-						<option value="yes" name="completed">Yes</option>
-					</select>
-				</div>
+				
 			</div>
 			<div class="new-trip-buttons">
 				<button type="button"><a href="/home">Back</a></button>

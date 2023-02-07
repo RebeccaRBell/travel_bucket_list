@@ -1,3 +1,4 @@
+import pdb
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from repositories import trip_repository
@@ -7,6 +8,7 @@ from repositories import continent_repository
 from models.trip import Trip
 from models.city import City
 from models.country import Country
+from models.continent import Continent
 
 trips_blueprint = Blueprint("users", __name__)
 
@@ -36,7 +38,7 @@ def new_trip():
     )
 
 
-@trips_blueprint.route("/add_trip", methods=["POST"])
+@trips_blueprint.route("/trips", methods=["POST"])
 def create_trip():
     new_continent = request.form["continent"]
     new_country = request.form["country"]
@@ -44,7 +46,7 @@ def create_trip():
     new_reason = request.form["reason"]
     new_season = request.form["season"]
     new_timeframe = request.form["timeframe"]
-    new_completed = request.form["completed"]
+    new_completed = "no"
     new_trip = Trip(
         new_continent,
         new_country,
@@ -55,6 +57,7 @@ def create_trip():
         new_completed,
     )
     trip_repository.save(new_trip)
+
     return redirect("/trips")
 
 
@@ -75,21 +78,25 @@ def edit_trip(id):
     )
 
 
-@trips_blueprint.route("/trips/<id>/delete")
-def delete_trip(id):
-    trip_repository.delete(id)
+@trips_blueprint.route("/trips/<id>", methods=["POST"])
+def update_trip(id):
+    continent = request.form["continent"]
+    country = request.form["country"]
+    city = request.form["city"]
+    reason = request.form["reason"]
+    season = request.form["season"]
+    timeframe = request.form["timeframe"]
+    completed = request.form["completed"]
+    updated_trip = Trip(
+        continent, country, city, reason, season, timeframe, completed, id
+    )
+    trip_repository.save(updated_trip)
     return redirect("/trips")
 
 
-@trips_blueprint.route("/add_new_city_country", methods=["POST"])
-def create_new_city():
-    new_continent = request.form["new_city_continent"]
-    new_country = request.form["new_city_country"]
-    new_city = request.form["new_city_name"]
-    new_city_country = Country(new_country, new_continent)
-    country_repository.save(new_city_country)
-    add_new_city = City(new_city, new_continent, new_city_country.id)
-    city_repository.save(add_new_city)
+@trips_blueprint.route("/trips/<id>/delete")
+def delete_trip(id):
+    trip_repository.delete(id)
     return redirect("/trips")
 
 

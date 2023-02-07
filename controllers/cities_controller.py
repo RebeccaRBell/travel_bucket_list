@@ -34,4 +34,4 @@ def create_new_city():
         country_repository.save(save_new_country)
         add_new_city_and_country = City(new_city, new_continent, save_new_country.id)
         city_repository.save(add_new_city_and_country)
-    return redirect("/trips/add_trip")
+    return redirect("/add_trip")

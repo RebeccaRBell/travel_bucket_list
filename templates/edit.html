@@ -3,7 +3,7 @@
 <div class="new-trip-container">
 	<div class="form-background">
 		<h1>Edit Trip</h1>
-		<form class="new-trip-form" action="/add_trip" method="POST">
+		<form class="new-trip-form" action="/trips/{{trip.id}}" method="POST">
 			<label for="continent">Continent:</label>
 			<select name="continent">
 				{% for continent in continents %}

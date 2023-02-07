@@ -2,6 +2,8 @@ from db.run_sql import run_sql
 from models.country import Country
 from models.city import City
 from models.trip import Trip
+from models.continent import Continent
+from controllers import trips_controller
 
 
 def save(trip):
@@ -16,8 +18,7 @@ def save(trip):
         trip.completed,
     ]
     results = run_sql(sql, values)
-    id = results[0]["id"]
-    trip.id = id
+    trip.id =  results[0]["id"]
     return trip
 
 
