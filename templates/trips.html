@@ -36,7 +36,10 @@
                         </div>
 		<hr />
 		<div class="trip-buttons">
-			<button class="edit-button"><a href="/trips/{{trips.id}}/edit">Edit Trip</a></button>
+                        {% if trips.completed == "no" %}
+                        <button class="visited-button"><a href="/trips/{{trips.id}}/mark_visited">Mark As Visited</a></button>
+			{% endif %}
+                        <button class="edit-button"><a href="/trips/{{trips.id}}/edit">Edit Trip</a></button>
                         
 			<button class="delete-button">
 				<a href="/trips/{{trips.id}}/delete"><i class="fa-regular fa-circle-xmark"></i></a></i>

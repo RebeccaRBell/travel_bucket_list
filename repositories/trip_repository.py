@@ -18,7 +18,7 @@ def save(trip):
         trip.completed,
     ]
     results = run_sql(sql, values)
-    trip.id =  results[0]["id"]
+    trip.id = results[0]["id"]
     return trip
 
 
@@ -86,3 +86,23 @@ def update(trip):
         trip.completed,
     ]
     run_sql(sql, values)
+
+
+def mark_visited(id):
+    trip = None
+    sql = "SELECT * FROM trips WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        trip = Trip(
+            result["continent_id"],
+            result["country_id"],
+            result["city_id"],
+            result["reason"],
+            result["season"],
+            result["timeframe"],
+            "yes",
+            result["id"],
+        )
+    return trip

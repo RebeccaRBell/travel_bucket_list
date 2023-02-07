@@ -100,6 +100,12 @@ def delete_trip(id):
     return redirect("/trips")
 
 
+@trips_blueprint.route("/trips/<id>/mark_visited")
+def mark_visited(id):
+    trip_repository.mark_visited(id)
+    return redirect("/trips")
+
+
 @trips_blueprint.route("/past")
 def past_trips():
     countries = country_repository.select_all()
