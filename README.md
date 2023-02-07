@@ -1,8 +1,8 @@
 # Travel Bucket List App
 
-This was a solo project as part of my studies to create an app to track someone's travel adventures.
+This was a solo project whilst studying with CodeClan with the brief of creating an app to track someone's travel adventures.
 
-#Project Brief
+# Project Brief
 
 The requirement for the project were to build an app allowing a user to:
 
@@ -12,7 +12,7 @@ The requirement for the project were to build an app allowing a user to:
 - create and delete entries
 - mark destinations as visited or still to see
 
-#Application Features:
+# Application Features:
 
 - Create, track and log travel bucket list destinations
 - Edit trips once they have been created
@@ -22,7 +22,7 @@ The requirement for the project were to build an app allowing a user to:
 - Filters trips by continent
 - Delete trips
 
-#Languages & Tools used:
+# Languages & Tools used:
 
 - Python
 - Flask (Jinja2)
