@@ -3,9 +3,13 @@
         <h1>All Trips</h1>
 </div>
 <div class="visited-buttons">
+        <div class="visited-buttons-top-row">
                 <button><a href="/past">Past Trips</a></button>
                 <button><a href="/future">Future Trips</a></button>
+                </div>
+                <div class="visited-buttons-bottom-row">
                 <button><a href="/view_by_continent">View Trips by Continent</a></button>
+                </div>
         </div>
         <div class="container">
 	{% for trips in trips %}
