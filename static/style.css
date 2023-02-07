@@ -472,42 +472,39 @@ main{
         font-family: var(--font-3);
 }
 
-.trip-buttons{
+.trip-buttons {
         display: flex;
         flex-wrap: row nowrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
 }
-.edit-button, .edit-button a {
-        margin: 0 auto;
-        width: 50%;
-        height: 30px;
-        background-color: var(--color-5);
+.trip-buttons button{
+        background-color: none;
         border: none;
-        border-radius: 20px;
-        text-decoration: none;
-        color: var(--color-4);
-        margin: 10px;
+        background: transparent;
 }
-.edit-button:hover, .edit-button a:hover{
-text-decoration: underline dotted;
-}
-.delete-button, .delete-button a{
-        width: 40px;
-        height: 40px;
-        margin: 0 auto;
-        padding: 0px;
-        border: none;
+.trip-buttons i {
         font-size: 30px;
-        text-align: center;
-        color: black;
-        background-color: transparent;
-        text-decoration: none;
-        text-align: right;
-        margin: 10px;
+        margin: 5px;
 }
-.delete-button:hover, .delete-button a:hover{
-        color: rgb(190, 55, 55);
+.visited-button i:hover{
+        color: rgb(100, 170, 100);
+}
+.edit-button i:hover {
+        color: var(--palette2-color-5);
+}
+.delete-button i:hover{
+        color: red;
+}
+.visited-button-confirmed i{
+        color:#68904D;
+        font-size: 40px;
+}
+.trip-buttons a {
+        text-decoration: none;
+        color: var(--color-1);
+        font-family: var(--font-3);
+
 }
 
 /* NEW TRIP PAGE */

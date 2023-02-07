@@ -39,10 +39,15 @@
 			</div>
                         </div>
 		<hr />
-		<div class="trip-buttons">
-			<button class="edit-button"><a href="/trips/{{trips.id}}">Edit Trip</a></button>
+<div class="trip-buttons">
+                        {% if trips.completed == "no" %}
+                        <button class="visited-button"><a href="/trips/{{trips.id}}/mark_visited"><i class="fa-regular fa-circle-check"></i><br>Mark As Visited</a></button>
+                        {% else %}  <button class="visited-button-confirmed"><i class="fa-regular fa-circle-check"></i></button>
+			{% endif %}
+                        <button class="edit-button"><a href="/trips/{{trips.id}}"><i class="fa-regular fa-pen-to-square"></i><br>Edit Trip</a></button>
+                        
 			<button class="delete-button">
-				<a href="/trip/{{trips.id}}/delete"><i class="fa-regular fa-circle-xmark"></i></a></i>
+				<a href="/trips/{{trips.id}}/delete"><i class="fa-regular fa-circle-xmark"></i><br>Delete Trip</a></i>
 			</button>
 		</div>
 	</div>

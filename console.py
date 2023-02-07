@@ -113,7 +113,7 @@ trip3 = Trip(
     continent1.id,
     country2.id,
     city2.id,
-    "Disneyland, Rude People, Sightseeing",
+    "Disneyland, Snails, Sightseeing",
     "Spring",
     "In the Next 2 Years",
     "no",
