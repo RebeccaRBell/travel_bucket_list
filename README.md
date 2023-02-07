@@ -4,7 +4,7 @@ This was a solo project whilst studying with CodeClan with the brief of creating
 
 # Project Brief
 
-The requirement for the project were to build an app allowing a user to:
+The requirements for the project were to build an app allowing a user to:
 
 - track cities and countries they want to visit and those they have visited
 - create and edit countries
@@ -30,6 +30,7 @@ The requirement for the project were to build an app allowing a user to:
 - HTML5
 - CSS
 
-#Screenshots
+# Screenshots
+
 ![Add-Trip-Page](/static/add_trip.png?raw=true)
-![Add-Trip-Page](/static/trips.png?raw=true)
+![All-Trips-Page](/static/trips.png?raw=true)
