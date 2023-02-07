@@ -10,4 +10,4 @@ Application Features:
 - Filters trips by continent
 - Delete trips
 
-![Alt text](PDA/site_snaps/static/add_trip.png?raw=true "Add Trip Page")
+![Add-Trip-Page](/static/add_trip.png?raw=true)
