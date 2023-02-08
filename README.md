@@ -1,4 +1,4 @@
-# Travel Bucket List App
+# Travel Bucket List App 🌍
 
 This was a solo project whilst studying with CodeClan with the brief of creating an app to track someone's travel adventures.
 
