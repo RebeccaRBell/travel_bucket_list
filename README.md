@@ -22,7 +22,7 @@ The requirements for the project were to build an app allowing a user to:
 - Filters trips by continent
 - Delete trips
 
-# Languages & Tools used:
+### Languages & Tools used:
 
 - Python
 - Flask (Jinja2)
@@ -31,12 +31,27 @@ The requirements for the project were to build an app allowing a user to:
 - CSS
 
 ### Running The App
-- 
+
+- Ensure Python and Flask are installed
+$    $ brew install python
+$    $ pip install Flask
+
+- Get the code
+ $ git clone https://github.com/https://github.com/RebeccaRBell/travel_bucket_list
+
+- Create Database
 
 
 
+
+### Wireframes
+
+| Add Trip Page Wireframe                                |                  Trips Page Wireframe                   |
+| ------------------------------------------------------ | :-----------------------------------------------------: |
+| ![Add-Trip-Wireframe](/static/trip_page_wireframe.png) | ![All-Trips-Wireframe](/static/trip_page_wireframe.png) |
 
 ### Screenshots
-| Add Trip Page                                                          | Trips Page
-|------------------------------------------------|:-------------------------------------------:|
-|![Add-Trip-Page](/static/add_trip.png?raw=true)|![All-Trips-Page](/static/trips.png?raw=true)|
+
+| Add Trip Page                                   |                  Trips Page                   |
+| ----------------------------------------------- | :-------------------------------------------: |
+| ![Add-Trip-Page](/static/add_trip.png?raw=true) | ![All-Trips-Page](/static/trips.png?raw=true) |
