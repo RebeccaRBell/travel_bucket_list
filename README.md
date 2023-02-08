@@ -33,27 +33,28 @@ The requirements for the project were to build an app allowing a user to:
 ### Running The App
 
 ##### Ensure Python and Flask are installed
--  $ brew install python
--  $ pip install Flask
+
+- $ brew install python
+- $ pip install Flask
 
 ##### Get the code
- - $ git clone https://github.com/https://github.com/RebeccaRBell/travel_bucket_list
+
+- $ git clone https://github.com/https://github.com/RebeccaRBell/travel_bucket_list
 
 ##### Create Database
--  $ 'createdb' + 'database_name' in the terminal (original was named 'trips_manager')
--  $ 'psql -d database_name -f trips_manager.sql'
+
+- $ 'createdb' + 'database_name' in the terminal (original was named 'trips_manager')
+- $ 'psql -d database_name -f trips_manager.sql'
 
 ##### Run Flask
-- $ in terminal, 'flask run' and command + click link in terminal to take to local server 
 
-
-
+- $ in terminal, 'flask run' and command + click link in terminal to take to local server
 
 ### Wireframes
 
-| Add Trip Page Wireframe                                |                  Trips Page Wireframe                   |
-| ------------------------------------------------------ | :-----------------------------------------------------: |
-| ![Add-Trip-Wireframe](/static/trip_page_wireframe.png) | ![All-Trips-Wireframe](/static/trip_page_wireframe.png) |
+| Add Trip Page Wireframe                               |                  Trips Page Wireframe                   |
+| ----------------------------------------------------- | :-----------------------------------------------------: |
+| ![Add-Trip-Wireframe](/static/new_trip_wireframe.png) | ![All-Trips-Wireframe](/static/trip_page_wireframe.png) |
 
 ### Screenshots
 
