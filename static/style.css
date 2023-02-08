@@ -575,6 +575,10 @@ main{
         font-family: var(--font-3);
         font-size: 15px;
 }
+.bullet-question {
+        background-color: var(--palette2-color-3);
+        border-radius: 5px;
+}
 .choice-questions{
         display:flex;
         flex-flow: colum nowrap;
