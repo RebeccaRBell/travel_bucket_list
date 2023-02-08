@@ -32,14 +32,19 @@ The requirements for the project were to build an app allowing a user to:
 
 ### Running The App
 
-- Ensure Python and Flask are installed
-$    $ brew install python
-$    $ pip install Flask
+##### Ensure Python and Flask are installed
+-  $ brew install python
+-  $ pip install Flask
 
-- Get the code
- $ git clone https://github.com/https://github.com/RebeccaRBell/travel_bucket_list
+##### Get the code
+ - $ git clone https://github.com/https://github.com/RebeccaRBell/travel_bucket_list
 
-- Create Database
+##### Create Database
+-  $ 'createdb' + 'database_name' in the terminal (original was named 'trips_manager')
+-  $ 'psql -d database_name -f trips_manager.sql'
+
+##### Run Flask
+- $ in terminal, 'flask run' and command + click link in terminal to take to local server 
 
 
 
