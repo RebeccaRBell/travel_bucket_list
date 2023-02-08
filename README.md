@@ -45,6 +45,7 @@ The requirements for the project were to build an app allowing a user to:
 
 - $ 'createdb' + 'database_name' in the terminal (original was named 'trips_manager')
 - $ 'psql -d database_name -f trips_manager.sql'
+- $ run python3 console.py in the terminal to add inbuilt trips
 
 ##### Run Flask
 
