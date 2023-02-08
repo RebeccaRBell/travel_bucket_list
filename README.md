@@ -2,7 +2,7 @@
 
 This was a solo project whilst studying with CodeClan with the brief of creating an app to track someone's travel adventures.
 
-# Project Brief
+### Project Brief
 
 The requirements for the project were to build an app allowing a user to:
 
@@ -12,7 +12,7 @@ The requirements for the project were to build an app allowing a user to:
 - create and delete entries
 - mark destinations as visited or still to see
 
-# Application Features:
+### Application Features:
 
 - Create, track and log travel bucket list destinations
 - Edit trips once they have been created
@@ -30,7 +30,13 @@ The requirements for the project were to build an app allowing a user to:
 - HTML5
 - CSS
 
-# Screenshots
+### Running The App
+- 
 
-![Add-Trip-Page](/static/add_trip.png?raw=true)
-![All-Trips-Page](/static/trips.png?raw=true)
+
+
+
+### Screenshots
+| Add Trip Page                                                          | Trips Page
+|------------------------------------------------|:-------------------------------------------:|
+|![Add-Trip-Page](/static/add_trip.png?raw=true)|![All-Trips-Page](/static/trips.png?raw=true)|
